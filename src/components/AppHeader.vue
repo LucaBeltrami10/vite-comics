@@ -13,10 +13,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-div.container {
-    width: 70%;
-    background-color: aqua;
-    margin: 0 auto;
-}
-</style>
+<style lang="scss"></style>
