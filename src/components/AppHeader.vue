@@ -13,4 +13,10 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use '../styles/partials/variables' as *;
+
+div.container {
+    background-color: $header-background;
+}
+</style>
