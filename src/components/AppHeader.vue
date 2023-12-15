@@ -29,10 +29,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
 
 div.container {
+    @include flex(row, space-between, center);
     background-color: $header-background;
 
     div {
@@ -40,6 +43,27 @@ div.container {
 
         img {
             height: 100%;
+        }
+    }
+
+    nav {
+        ul {
+            @include flex(row, space-between, center);
+
+            li {
+                padding: 1rem 0 1rem 0rem;
+                margin-left: 1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $color-text-navbar;
+                font-size: 0.8rem;
+                border-bottom: 3px solid rgba($color: #000000, $alpha: 0);
+
+                &:hover {
+                    color: $color-text-navbar-hover;
+                    border-bottom: 3px solid $color-text-navbar-hover;
+                }
+            }
         }
     }
 }
