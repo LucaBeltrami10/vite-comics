@@ -18,10 +18,11 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 main {
-    color: $main-background;
+    background-color: $main-background;
 
     p {
         padding: 1rem 0;
+        color: white;
     }
 }
 </style>
