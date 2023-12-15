@@ -51,12 +51,12 @@ div.container {
             @include flex(row, space-between, center);
 
             li {
-                padding: 1rem 0 1rem 0rem;
+                padding: 2rem 0 2rem 0rem;
                 margin-left: 1rem;
                 font-weight: 600;
                 text-transform: uppercase;
                 color: $color-text-navbar;
-                font-size: 0.8rem;
+                font-size: 0.65rem;
                 border-bottom: 3px solid rgba($color: #000000, $alpha: 0);
 
                 &:hover {

@@ -2,7 +2,7 @@
     <footer>
         <div class="upper-footer">
             <div class="container top">
-                <div>
+                <div class="column">
                     <article>
                         <h1>dc comics</h1>
                         <ul>
@@ -23,7 +23,7 @@
                         </ul>
                     </article>
                 </div>
-                <article>
+                <article class="column">
                     <h1>dc</h1>
                     <ul>
                         <li>Term Of Use</li>
@@ -39,7 +39,7 @@
                         <li>Contact Us</li>
                     </ul>
                 </article>
-                <article>
+                <article class="column">
                     <h1>sites</h1>
                     <ul>
                         <li>DC</li>
@@ -89,6 +89,10 @@ footer {
             background-position: right;
             background-repeat: no-repeat;
 
+            .column {
+                padding: 1.5rem 0 1.5rem 0;
+            }
+
             h1 {
                 text-transform: uppercase;
                 font-size: 1rem;
@@ -110,6 +114,7 @@ footer {
 
     div.bottom-footer {
         background-color: $bottom-footer-background;
+        padding: 1rem 0 1rem 0;
 
         div.container.bottom {
             @include flex(row, space-between, center);
