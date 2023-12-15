@@ -59,7 +59,29 @@ export default {
 }
 </script>
 
-<style lang="" scoped>
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
-    
+
+div.container {
+    @include flex(row, start, center);
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: $color-footer-title-list;
+    }
+
+    ul {
+        margin: 0 1rem 0 0;
+
+        li {
+            font-size: 0.7rem;
+            margin: 0 0 0.2rem 0;
+            color: $color-footer-list-item;
+        }
+    }
+
+}
 </style>
