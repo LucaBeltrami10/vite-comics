@@ -1,9 +1,7 @@
 <template lang="">
     <footer>
-        <div class="container">
-
-            <div class="upper-footer">
-                <div class="ul-container">
+        <div class="upper-footer">
+            <div class="container top">
                 <div>
                     <article>
                         <h1>dc comics</h1>
@@ -51,20 +49,20 @@
                         <li>DC Power Visa</li>
                     </ul>
                 </article>
-                </div>
-
-                <div class="img-container">
-
-                </div>
-
             </div>
-
-            <div class="bottom-footer">
-
+        </div>
+        <div class="bottom-footer">
+            <div class="container bottom">
+                <button>sign-up now!</button>
+                <div class="social">
+                    <h1>follow us</h1>
+                    <img src="../assets/img/footer-facebook.png" alt="facebook logo">
+                    <img src="../assets/img/footer-twitter.png" alt="twitter logo">
+                    <img src="../assets/img/footer-youtube.png" alt="youtube logo">
+                    <img src="../assets/img/footer-pinterest.png" alt="pinterest logo">
+                    <img src="../assets/img/footer-periscope.png" alt="periscope logo">
+                </div>
             </div>
-            
-
-
         </div>
     </footer>
 </template>
@@ -81,23 +79,15 @@ export default {
 
 
 footer {
-    background-image: url('../assets/img/footer-bg.jpg');
-}
-
-div.container {
-    @include flex(row, space-between, center);
-    background-image: url('../assets/img/dc-logo-bg.png');
-    background-size: 22rem;
-    background-position: right;
-    background-repeat: no-repeat;
-
     div.upper-footer {
+        background-image: url('../assets/img/footer-bg.jpg');
 
-
-        div.ul-container {
+        div.container.top {
             @include flex(row, start, start);
-            width: 100%;
-
+            background-image: url('../assets/img/dc-logo-bg.png');
+            background-size: 22rem;
+            background-position: right;
+            background-repeat: no-repeat;
 
             h1 {
                 text-transform: uppercase;
@@ -115,8 +105,41 @@ div.container {
                     color: $color-footer-list-item;
                 }
             }
-
         }
     }
+
+    div.bottom-footer {
+        background-color: $bottom-footer-background;
+
+        div.container.bottom {
+            @include flex(row, space-between, center);
+
+            button {
+                border: 2px solid $color-border-button;
+                padding: 0.7rem;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                color: white;
+                background-color: rgba($color: #000000, $alpha: 0)
+            }
+
+            div.social {
+                @include flex(row, start, center);
+
+                h1 {
+                    text-transform: uppercase;
+                    color: $color-social-title;
+                    font-size: 1rem;
+                    margin-right: 1rem;
+                }
+
+                img {
+                    width: 25px;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
 }
 </style>
