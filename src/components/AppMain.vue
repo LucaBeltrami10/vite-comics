@@ -9,8 +9,8 @@
                 <CardMainSection v-for="card in cardList" :imageSrc="card.thumb" :descriptionImage="card.series"
                     :title="card.series" />
             </div>
+            <button>load more</button>
         </div>
-
     </main>
 </template>
 
@@ -158,8 +158,18 @@ main {
 
         }
 
-
-
+        button {
+            background-color: $stiker-and-button-main;
+            border: none;
+            text-transform: uppercase;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            margin-left: 50%;
+            margin-bottom: 10px;
+            transform: translate(-50%, 0px);
+            font-size: 0.6rem;
+            font-weight: 800;
+        }
     }
 }
 </style>

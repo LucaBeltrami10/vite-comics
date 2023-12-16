@@ -34,8 +34,9 @@ article {
 
     p {
         padding: 10px 0;
-        font-size: 0.77rem;
+        font-size: 0.6rem;
         color: white;
+        text-transform: uppercase;
     }
 }
 </style>
