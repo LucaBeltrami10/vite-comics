@@ -2,7 +2,8 @@
     <main>
         <div class="jumbotron"></div>
         <div class="container">
-            <p>--- CONTENUTO ---</p>
+            <div class="card" v-for="card in cardList">
+            </div>
         </div>
 
     </main>
@@ -112,9 +113,17 @@ main {
         background-size: 100%;
     }
 
-    p {
-        padding: 1rem 0;
-        color: white;
+    div.container {
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+
+        div.card {
+            height: 140px;
+            width: calc((100% / 6) - 16px);
+            background-color: magenta;
+            margin: 35px 8px 0 8px
+        }
     }
 }
 </style>
