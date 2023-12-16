@@ -2,8 +2,6 @@
     <main>
         <div class="jumbotron"></div>
         <div class="container">
-            <div class="card" v-for="card in cardList">
-            </div>
         </div>
 
     </main>
