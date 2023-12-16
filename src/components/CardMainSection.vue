@@ -8,9 +8,9 @@
 export default {
     name: 'CardMainSection',
     props: [
-        imageSrc,
-        descriptionImage,
-        title,
+        'imageSrc',
+        'descriptionImage',
+        'title',
     ],
 
 }
