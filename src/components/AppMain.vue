@@ -1,5 +1,6 @@
 <template>
     <main>
+        <div class="jumbotron"></div>
         <div class="container">
             <p>--- CONTENUTO ---</p>
         </div>
@@ -19,6 +20,15 @@ export default {
 
 main {
     background-color: $main-background;
+
+    div.jumbotron {
+        height: 280px;
+        width: 100%;
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 
     p {
         padding: 1rem 0;
