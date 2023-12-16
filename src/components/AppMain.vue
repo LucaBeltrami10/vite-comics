@@ -2,14 +2,20 @@
     <main>
         <div class="jumbotron"></div>
         <div class="container">
+            <CardMainSection v-for="card in cardList" :imageSrc="card.thumb" :descriptionImage="card.series"
+                :title="card.series" />
         </div>
 
     </main>
 </template>
 
 <script>
+import CardMainSection from './CardMainSection.vue';
 export default {
     name: 'AppMain',
+    components: {
+        CardMainSection,
+    },
     data() {
         return {
             cardList: [
