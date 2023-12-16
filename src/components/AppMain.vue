@@ -2,8 +2,13 @@
     <main>
         <div class="jumbotron"></div>
         <div class="container">
-            <CardMainSection v-for="card in cardList" :imageSrc="card.thumb" :descriptionImage="card.series"
-                :title="card.series" />
+            <div class="stiker">
+                <p>current series</p>
+            </div>
+            <div class="card-container">
+                <CardMainSection v-for="card in cardList" :imageSrc="card.thumb" :descriptionImage="card.series"
+                    :title="card.series" />
+            </div>
         </div>
 
     </main>
@@ -118,16 +123,43 @@ main {
     }
 
     div.container {
-        @include flex(row, space-between, start);
-        flex-wrap: wrap;
-        padding-bottom: 40px;
+        position: relative;
 
-        div.card {
-            height: 140px;
-            width: calc((100% / 6) - 16px);
-            background-color: magenta;
-            margin: 35px 8px 0 8px
+        div.stiker {
+            @include flex(row, center, center);
+            background-color: $stiker-and-button-main;
+            width: 160px;
+            padding: 0.5rem 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(0px, -50%);
+
+
+            p {
+                color: white;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
         }
+
+        div.card-container {
+            width: 100%;
+            @include flex(row, space-between, start);
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+
+            div.card {
+                height: 140px;
+                width: calc((100% / 6) - 16px);
+                background-color: magenta;
+                margin: 35px 8px 0 8px
+            }
+
+        }
+
+
+
     }
 }
 </style>
