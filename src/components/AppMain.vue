@@ -118,7 +118,7 @@ main {
     }
 
     div.container {
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, start);
         flex-wrap: wrap;
         padding-bottom: 40px;
 

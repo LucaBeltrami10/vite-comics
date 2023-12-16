@@ -1,6 +1,8 @@
 <template lang="">
 <article>
-    <img :src="imageSrc" :alt="descriptionImage">
+    <div>
+        <img :src="imageSrc" :alt="descriptionImage">
+    </div>
     <p>{{title}}</p>
 </article>
 </template>
@@ -17,10 +19,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 article {
-    height: 140px;
     width: calc((100% / 6) - 16px);
-    background-color: magenta;
     margin: 35px 8px 0 8px;
+
+    div {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+    }
 
     img {
         width: 100%;
@@ -28,6 +34,8 @@ article {
 
     p {
         padding: 10px 0;
+        font-size: 0.77rem;
+        color: white;
     }
 }
 </style>
