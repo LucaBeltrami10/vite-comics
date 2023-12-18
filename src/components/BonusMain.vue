@@ -33,4 +33,23 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
+
+div.container {
+    @include flex(row, space-between, center);
+    background-color: $background-bonus;
+    color: $color-bonus;
+
+    article {
+        @include flex(row, space-between, center);
+        padding: 1.5rem 0;
+
+        img {
+            height: 40px;
+        }
+
+        p {
+            margin-left: 0.5rem;
+        }
+    }
+}
 </style>
