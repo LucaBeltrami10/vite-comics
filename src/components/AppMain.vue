@@ -11,15 +11,19 @@
             </div>
             <button>load more</button>
         </div>
+        <BonusMain />
+
     </main>
 </template>
 
 <script>
 import CardMainSection from './CardMainSection.vue';
+import BonusMain from './BonusMain.vue';
 export default {
     name: 'AppMain',
     components: {
         CardMainSection,
+        BonusMain,
     },
     data() {
         return {
